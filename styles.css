@@ -94,7 +94,7 @@ h1 {
   background-color: #C83E4D; /* Brown */
 }
 
-.confetti:nth-child(4n) {
+.confetti:nth-child(6n) {
   background-color: #fffafa; /* White */
 }
 
@@ -102,11 +102,11 @@ h1 {
   background-color: #000; 
 }
 
-.confetti:nth-child(6n) {
+.confetti:nth-child(3n) {
   background-image: url('voted-1.png'); /* SVG "I Voted" sticker */
 }
 
-.confetti:nth-child(7n) {
+.confetti:nth-child(4n) {
   background-image: url('voted-2.png'); /* SVG "I Voted" sticker */
 }
 
