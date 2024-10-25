@@ -103,5 +103,10 @@ h1 {
 }
 
 .confetti:nth-child(6n) {
-  background-image: url('i-voted-sticker.svg'); /* SVG "I Voted" sticker */
+  background-image: url('voted-1.png'); /* SVG "I Voted" sticker */
 }
+
+.confetti:nth-child(7n) {
+  background-image: url('voted-2.png'); /* SVG "I Voted" sticker */
+}
+
