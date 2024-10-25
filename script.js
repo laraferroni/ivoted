@@ -35,7 +35,7 @@ function createConfetti() {
 }
 
 // Create initial confetti
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
   setTimeout(createConfetti, Math.random() * 2000);
 }
 
