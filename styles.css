@@ -14,11 +14,14 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
-  color: white;
-  z-index: 10;
-  position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Futura', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #C83E4D;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 0px #F4B860;
 }
 
 .confetti-container {
@@ -79,7 +82,7 @@ h1 {
 
 /* Confetti Colors from the Image */
 .confetti:nth-child(odd) {
-  background-color: #ffd700; /* Yellow */
+  background-color: #F4B860; /* Yellow */
 }
 
 .confetti:nth-child(even) {
@@ -87,7 +90,7 @@ h1 {
 }
 
 .confetti:nth-child(3n) {
-  background-color: #b5651d; /* Brown */
+  background-color: #C83E4D; /* Brown */
 }
 
 .confetti:nth-child(4n) {
@@ -95,5 +98,5 @@ h1 {
 }
 
 .confetti:nth-child(5n) {
-  background-color: #87ceeb; /* Light Blue */
+  background-color: #000; 
 }
