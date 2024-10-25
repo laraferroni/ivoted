@@ -24,15 +24,6 @@ h1 {
   text-shadow: 2px 2px 0px #F4B860;
 }
 
-.confetti-container {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
 .thanks-container {
   position: absolute;
   z-index: 10;
@@ -46,27 +37,30 @@ h1 {
   text-align: center;
 }
 
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .confetti {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: red;
-  opacity: 0.8;
-  animation: fall 5s infinite ease-in-out;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a slight shadow for depth */
+  background-color: #f00;
+  animation: fall linear forwards;
 }
-
-
 
 @keyframes fall {
   0% {
-    transform: translateY(-100vh) rotate(0);
-    opacity: 1;
+    transform: translateY(-100vh) rotate(0deg);
   }
   100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0.3;
+    transform: translateY(100vh) rotate(720deg);
   }
 }
 
@@ -87,4 +81,3 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
 }
-
