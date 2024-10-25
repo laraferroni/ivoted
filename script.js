@@ -23,7 +23,7 @@ function createConfetti() {
   confetti.style.animationDuration = `${duration}s`;
 
   // Assign a specific class based on a random number
-  const randomClass = Math.floor(Math.random() * 5);
+  const randomClass = Math.floor(Math.random() * 7);
   confetti.classList.add(`confetti-type-${randomClass}`);
 
   confettiContainer.appendChild(confetti);

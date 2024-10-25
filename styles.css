@@ -82,3 +82,17 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
 }
+.confetti-type-5 {
+  background-color: transparent;
+  background-image: url('voted-3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.confetti-type-6 {
+  background-color: transparent;
+  background-image: url('voted-4.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
