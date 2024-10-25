@@ -70,6 +70,24 @@ h1 {
   }
 }
 
+.confetti-type-0 { background-color: #f94144; }
+.confetti-type-1 { background-color: #f3722c; }
+.confetti-type-2 { background-color: #f8961e; }
+.confetti-type-3 {
+  background-color: transparent;
+  background-image: url('voted-1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.confetti-type-4 {
+  background-color: transparent;
+  background-image: url('voted-2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Confetti Colors from the Image */
 .confetti:nth-child(odd) {
   background-color: #F4B860; /* Yellow */
