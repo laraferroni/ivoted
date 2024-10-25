@@ -3,77 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Voted Animation</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
-
-    svg {
-      width: 300px;
-      height: 300px;
-    }
-
-    .vote-box {
-      stroke-dasharray: 500;
-      stroke-dashoffset: 500;
-      animation: drawBox 2s forwards;
-    }
-
-    .ballot {
-      stroke-dasharray: 150;
-      stroke-dashoffset: 150;
-      animation: dropBallot 2s forwards ease-in-out 1s;
-    }
-
-    .text {
-      opacity: 0;
-      animation: revealText 1s forwards 3s;
-    }
-
-    @keyframes drawBox {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @keyframes dropBallot {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes revealText {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+  <title>Thanks for voting!</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Ballot Box -->
-  <rect x="40" y="80" width="120" height="70" fill="none" stroke="black" stroke-width="3" class="vote-box" />
-  
-  <!-- Ballot Paper -->
-  <rect x="70" y="30" width="60" height="40" fill="none" stroke="black" stroke-width="3" class="ballot" />
-  
-  <!-- I Voted! Text -->
-  <text x="50" y="180" font-family="Arial" font-size="24" fill="black" class="text">I Voted!</text>
-</svg>
-
+  <div class="confetti-container">
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

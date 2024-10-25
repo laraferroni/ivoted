@@ -5,17 +5,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f9f9f9;
+  background-image: url('voted.webp'); /* Use the uploaded image */
+  background-size: cover;
+  background-position: center;
   font-family: 'Arial', sans-serif;
   position: relative;
-  overflow: hidden; /* Ensures confetti stays within the viewport */
+  overflow: hidden;
 }
 
 h1 {
   font-size: 4rem;
-  color: #333;
+  color: white;
   z-index: 10;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .confetti-container {
@@ -23,8 +26,7 @@ h1 {
   top: 0;
   width: 100%;
   height: 100vh;
-  text-align: center;
-  overflow: hidden; /* Confetti is contained within the viewport */
+  overflow: hidden;
 }
 
 .confetti {
@@ -34,28 +36,51 @@ h1 {
   background-color: red;
   opacity: 0.8;
   animation: fall 5s infinite ease-in-out;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a slight shadow for depth */
+}
+
+.confetti::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 2px;
+  height: 50px;
+  background-color: inherit;
+  opacity: 0.5;
+  filter: blur(2px); /* Creates a trail effect */
+  transform: rotate(45deg);
 }
 
 @keyframes fall {
   0% {
-    transform: translateY(-100vh) rotate(0); /* Start above the viewport */
+    transform: translateY(-100vh) rotate(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(100vh) rotate(360deg); /* Fall down the viewport */
+    transform: translateY(100vh) rotate(360deg);
     opacity: 0.3;
   }
 }
 
-/* Random colors for confetti */
+/* Confetti Colors from the Image */
 .confetti:nth-child(odd) {
-  background-color: blue;
+  background-color: #ffd700; /* Yellow */
 }
 
 .confetti:nth-child(even) {
-  background-color: white;
+  background-color: #4682b4; /* Blue */
 }
 
 .confetti:nth-child(3n) {
-  background-color: red;
+  background-color: #b5651d; /* Brown */
+}
+
+.confetti:nth-child(4n) {
+  background-color: #fffafa; /* White */
+}
+
+.confetti:nth-child(5n) {
+  background-color: #87ceeb; /* Light Blue */
 }
