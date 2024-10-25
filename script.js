@@ -26,7 +26,8 @@ function createConfetti() {
   const randomClass = Math.floor(Math.random() * 7);
   confetti.classList.add(`confetti-type-${randomClass}`);
 
-  confetti.style.zIndex = Math.floor(Math.random() * 100 + 1);
+  const zIndex = Math.random() < 0.5 ? Math.floor(Math.random() * 5) + 6 : Math.floor(Math.random() * 15) + 11;
+  confetti.style.zIndex = zIndex;
 
   confettiContainer.appendChild(confetti);
 
