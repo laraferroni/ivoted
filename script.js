@@ -1,3 +1,5 @@
+const confettiContainer = document.querySelector('.confetti-container');
+
 function createConfetti() {
   const confetti = document.createElement('div');
   confetti.classList.add('confetti');
@@ -20,7 +22,13 @@ function createConfetti() {
   // Remove confetti after it falls out of view
   setTimeout(() => {
     confetti.remove();
-  }, 6000);
+  }, 8000);
 }
 
-// ... rest of the code remains the same
+// Create initial confetti
+for (let i = 0; i < 50; i++) {
+  setTimeout(createConfetti, Math.random() * 2000);
+}
+
+// Continue creating confetti
+setInterval(createConfetti, 200);
