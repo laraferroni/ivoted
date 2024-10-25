@@ -1,5 +1,3 @@
-const confettiContainer = document.querySelector('.confetti-container');
-
 function createConfetti() {
   const confetti = document.createElement('div');
   confetti.classList.add('confetti');
@@ -13,6 +11,10 @@ function createConfetti() {
   confetti.style.animationDelay = `${Math.random() * 2}s`;
   confetti.style.animationDuration = `${Math.random() * 3 + 5}s`;
 
+  // Assign a specific class based on a random number
+  const randomClass = Math.floor(Math.random() * 5);
+  confetti.classList.add(`confetti-type-${randomClass}`);
+
   confettiContainer.appendChild(confetti);
 
   // Remove confetti after it falls out of view
@@ -21,10 +23,4 @@ function createConfetti() {
   }, 6000);
 }
 
-// Generate confetti
-for (let i = 0; i < 100; i++) {
-  createConfetti();
-}
-
-// Continuously add new confetti for a lively effect
-setInterval(createConfetti, 400);
+// ... rest of the code remains the same
