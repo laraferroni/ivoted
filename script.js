@@ -26,6 +26,8 @@ function createConfetti() {
   const randomClass = Math.floor(Math.random() * 7);
   confetti.classList.add(`confetti-type-${randomClass}`);
 
+  confetti.style.zIndex = Math.floor(Math.random() * 100 + 1);
+
   confettiContainer.appendChild(confetti);
 
   // Remove confetti after animation completes
