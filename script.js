@@ -8,7 +8,7 @@ function createConfetti() {
   confetti.style.left = `${Math.random() * 100}vw`;
   
   // Random sizes for variety
-  const size = Math.random() * 10 + 5;
+  const size = Math.random() * 20 + 15;
   confetti.style.width = `${size}px`;
   confetti.style.height = `${size}px`;
 
