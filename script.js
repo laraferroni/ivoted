@@ -26,7 +26,10 @@ function createConfetti() {
   const randomClass = Math.floor(Math.random() * 7);
   confetti.classList.add(`confetti-type-${randomClass}`);
 
-  const zIndex = Math.random() < 0.5 ? Math.floor(Math.random() * 5) + 6 : Math.floor(Math.random() * 15) + 11;
+  // Set random z-index with more behind than in front
+  const zIndex = Math.random() < 0.8 ? 
+    Math.floor(Math.random() * 5) + 6 :  // 80% chance to be behind (z-index 6-10)
+    Math.floor(Math.random() * 15) + 11; // 20% chance to be in front (z-index 11-25)
   confetti.style.zIndex = zIndex;
 
   confettiContainer.appendChild(confetti);
