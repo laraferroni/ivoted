@@ -45,22 +45,23 @@ h1 {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
+  overflow: hidden;
 }
 
 .confetti {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #f00;
+  border-radius: 50%;
   animation: fall linear forwards;
 }
 
 @keyframes fall {
-  0% {
-    transform: translateY(-100vh) rotate(0deg);
+  from {
+    transform: translateY(-5vh) rotate(0deg);
   }
-  100% {
-    transform: translateY(100vh) rotate(720deg);
+  to {
+    transform: translateY(105vh) rotate(720deg);
   }
 }
 

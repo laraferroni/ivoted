@@ -4,14 +4,23 @@ function createConfetti() {
   const confetti = document.createElement('div');
   confetti.classList.add('confetti');
 
-  // Random positions and sizes for variety
+  // Random horizontal position
   confetti.style.left = `${Math.random() * 100}vw`;
-  confetti.style.width = `${Math.random() * 20 + 20}px`;
-  confetti.style.height = confetti.style.width;
+  
+  // Random sizes for variety
+  const size = Math.random() * 10 + 5;
+  confetti.style.width = `${size}px`;
+  confetti.style.height = `${size}px`;
 
-  // Random delays and durations for falling confetti
+  // Set initial vertical position above the viewport
+  confetti.style.top = `-${size}px`;
+
+  // Random delays for falling confetti
   confetti.style.animationDelay = `${Math.random() * 2}s`;
-  confetti.style.animationDuration = `${Math.random() * 3 + 5}s`;
+  
+  // Adjust animation duration based on viewport height
+  const duration = Math.random() * 3 + 5;
+  confetti.style.animationDuration = `${duration}s`;
 
   // Assign a specific class based on a random number
   const randomClass = Math.floor(Math.random() * 5);
@@ -19,10 +28,10 @@ function createConfetti() {
 
   confettiContainer.appendChild(confetti);
 
-  // Remove confetti after it falls out of view
+  // Remove confetti after animation completes
   setTimeout(() => {
     confetti.remove();
-  }, 8000);
+  }, duration * 1000 + 2000); // Add a buffer to ensure it's off-screen
 }
 
 // Create initial confetti
